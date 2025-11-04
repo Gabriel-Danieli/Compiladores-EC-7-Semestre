@@ -10,8 +10,8 @@ Este projeto foi desenvolvido como atividade para a disciplina de Compiladores. 
 
 ### Funcionalidades
 
-O *scanner* (`scannerC-.c`) é construído a partir de um Autômato Finito Determinístico (DFA) e é capaz de:
-
+O *scanner* (`scannerCMinus.c`) é construído a partir de um Autômato Finito Determinístico (DFA) e é capaz de:
+C
   * Ler um arquivo de código-fonte `.c-`.
   * Reconhecer e classificar palavras-chave (como `if`, `while`, `int`, `return`).
   * Identificar IDs (nomes de variáveis e funções).
@@ -34,13 +34,13 @@ Siga os passos abaixo para compilar e executar o analisador léxico.
 
 #### 1\. Compilação
 
-Abra seu terminal na pasta do projeto (onde o `scannerC-.c` está localizado) e execute o seguinte comando para compilar o programa:
+Abra seu terminal na pasta do projeto (onde o `scannerCMinus.c` está localizado) e execute o seguinte comando para compilar o programa:
 
 ```bash
-gcc scannerC-.c -o scannerC-
+gcc scannerCMinus.c -o scannerCMinus
 ```
 
-Este comando irá ler o `scannerC-.c`, compilá-lo e criar um arquivo executável chamado `scannerC-` (ou `scannerC-.exe` no Windows).
+Este comando irá ler o `scannerCMinus.c`, compilá-lo e criar um arquivo executável chamado `scannerCMinus` (ou `scannerCMinus.exe` no Windows).
 
 #### 2\. Execução
 
@@ -49,19 +49,19 @@ Para analisar um arquivo de código C-, execute o programa compilado e passe o n
 **Uso:**
 
 ```bash
-./scannerC- <nome_do_arquivo.c->
+./scannerCMinus <nome_do_arquivo.c->
 ```
 
 **Exemplo com um arquivo válido (ex: `testeBom.c-`):**
 
 ```bash
-./scannerC- testeBom.c-
+./scannerCMinus testeBom.c-
 ```
 
 **Exemplo com um arquivo inválido (ex: `testeRuim.c-`):**
 
 ```bash
-./scannerC- testeRuim.c-
+./scannerCMinus testeRuim.c-
 ```
 
 ### Exemplo de Saída
@@ -98,7 +98,7 @@ Linha 43   | Fim de Arquivo   | EOF             | -
 **Saída para `testeRuim.c-` (detecção de erro):**
 
 ```
---- Iniciando Analise Lexica de test_ruim.c- ---
+--- Iniciando Analise Lexica de testeRuim.c- ---
 ----------------------------------------------------------------
 Linha     | Tipo             | Nome            | Valor
 ----------------------------------------------------------------
@@ -107,6 +107,6 @@ Linha 7    | Operador         | /               | /
 Linha 7    | ID               | Teste           | -
 Linha 7    | ID               | de              | -
 ...
-Linha 15   | Erro Léxico      | @               | !
+Linha 17   | Erro Léxico      | @               | !
 --- Analise Lexica Concluida ---
 ```
