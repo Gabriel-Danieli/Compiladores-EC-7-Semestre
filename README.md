@@ -37,10 +37,10 @@ Siga os passos abaixo para compilar e executar o analisador léxico.
 Abra seu terminal na pasta do projeto (onde o `scannerCMinus.c` está localizado) e execute o seguinte comando para compilar o programa:
 
 ```bash
-gcc scannerCMinus.c -o scannerCMinus
+gcc scannerCMinus.c -o ScannerCMinus
 ```
 
-Este comando irá ler o `scannerCMinus.c`, compilá-lo e criar um arquivo executável chamado `scannerCMinus` (ou `scannerCMinus.exe` no Windows).
+Este comando irá ler o `scannerCMinus.c`, compilá-lo e criar um arquivo executável chamado `ScannerCMinus` (ou `ScannerCMinus.exe` no Windows).
 
 #### 2\. Execução
 
@@ -49,19 +49,19 @@ Para analisar um arquivo de código C-, execute o programa compilado e passe o n
 **Uso:**
 
 ```bash
-./scannerCMinus <nome_do_arquivo.c->
+./ScannerCMinus <nome_do_arquivo.c->
 ```
 
 **Exemplo com um arquivo válido (ex: `testeBom.c-`):**
 
 ```bash
-./scannerCMinus testeBom.c-
+./ScannerCMinus testeBom.c-
 ```
 
 **Exemplo com um arquivo inválido (ex: `testeRuim.c-`):**
 
 ```bash
-./scannerCMinus testeRuim.c-
+./ScannerCMinus testeRuim.c-
 ```
 
 ### Exemplo de Saída
