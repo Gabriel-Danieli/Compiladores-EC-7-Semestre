@@ -1,0 +1,28 @@
+/*
+ * test_ruim.c-
+ * Testa casos de erro e casos extremos para o scanner.
+ */
+
+// Teste de comentario invalido (//)
+/* O scanner deve ler '/', '/', 'Teste', 'de', ... */
+
+int var123;
+int ifwhile; /* ID valido, nao keyword */
+
+/* Teste de operadores colados */
+var123 = 1+2-3*4/5<6>7<=8>=9==10!=11;
+
+/* ########## Testes de ERRO ########## */
+
+int @invalido; /* Erro Léxico: @ */
+int x = 5 $ 10; /* Erro Léxico: $ */
+
+/*
+ * Teste de comentario nao fechado.
+ * O scanner deve ler ate o EOF e reportar
+ * "Comentario nao fechado".
+
+if (x ! 5) { /* Erro Léxico: ! (nao eh !=) */
+    x = 0;
+}
+

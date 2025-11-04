@@ -1,0 +1,46 @@
+/*
+ * test_bom.c-
+ * Testa um programa C- sintaticamente (quase) correto.
+ * Foco: Palavras-chave, IDs, Numeros, Operadores e Delimitadores.
+ */
+
+int max(int n1, int n2) {
+    int resultado;
+    
+    if (n1 > n2)
+        resultado = n1;
+    else
+        resultado = n2;
+    
+    return resultado;
+}
+
+/* Funcao principal */
+void main(void) {
+    int a[10];
+    int b;
+    a[0] = 100;
+    b = 205;
+
+    int c;
+    c = max(a[0], b);
+
+    /* Teste de todos os operadores */
+    if (c >= 200) {
+        a[1] = a[0] + 1;
+    }
+    if (c <= 300) {
+        a[2] = b - 1;
+    }
+    if (c == 205) {
+        a[3] = c * 2;
+    }
+    if (c != 0) {
+        a[4] = 10 / 2;
+    }
+    
+    /* Teste de while e < */
+    while (a[4] < 10) {
+        a[4] = a[4] + 1;
+    }
+}
